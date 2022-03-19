@@ -3,11 +3,12 @@ import React from "react";
 import Bookings from "./Bookings";
 import "./App.css";
 import { Footer } from "./Footer";
+import { Heading } from "./Heading";
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">CYF Hotel - jackhclee</header>
+      <Heading />
       <Bookings />
       <Footer
         addressArray={[
