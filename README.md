@@ -7,7 +7,7 @@ To assist reviewing and learning, may I kindly request you to follow below extra
 3. Select the correct repository and branch to merge into your project. You should be merging Feature Branch to the master branch of **_your repository_** rather the CodeYourFuture one.
    ![cyf-2022-03-19b.jpg](https://github.com/jackhclee/wallymobi/blob/main/cyf-2022-03-19b.jpg)
 4. Name branches using this pattern **_Project Code - NN (e.g. CHT-01)_**
-5. Deplopy your work to Netlify and put the URL of site at the Github project's About field
+5. Deploy your work to Netlify and put the URL of site at the Github project's About field
 6. (Strongly encouraged) Create Github project and issues to track and relate all your work. Use Github keywords `fixes #` to link PR to an issue.
 7. ![cyf-2022-03-19a.jpg](https://github.com/jackhclee/wallymobi/blob/main/cyf-2022-03-19a.jpg)
 8. Weekly coursework submission to CYF Repo. Submit a pull request of your repo's master branch which includes works done in feature branches to CYF's Hotel master branch weekly.
