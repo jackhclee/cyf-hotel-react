@@ -5,7 +5,7 @@ const TouristInfoCards = props => {
     return (
       <div>
         <div>
-          <img class="citycard" src={city.img} />
+          <img class="citycard" src={city.img} alt="Citycard for {city.name}" />
         </div>
         <h3>{city.name}</h3>
         <div>{city.description}</div>
