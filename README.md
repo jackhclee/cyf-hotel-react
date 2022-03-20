@@ -1,3 +1,12 @@
+# Special Instructions to Jack's Buddies
+
+To assist reviewing and learning, may I kindly request you to follow below extra instructions:
+
+1. Decide and choose a Project Code for your project.
+2. Create Feature Branches for each exercises. Commit feature changes to resepective branches and merge to your master branch when for submission. So you should have at least 7 branches for Lesson 1
+3. Name branches using this pattern Project Code - NN (e.g. CHT-01)
+4. Deplopy your work to Netlify and put the URL of site at the About
+
 A hotel booking application in React. Homework for the [CodeYourFuture React module](https://codeyourfuture.github.io/syllabus-master/react/)
 
 ![Bookings Search page](Bookings.png)
