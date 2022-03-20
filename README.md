@@ -9,8 +9,8 @@ To assist reviewing and learning, may I kindly request you to follow below extra
 4. Name branches using this pattern **_Project Code - NN (e.g. CHT-01)_**
 5. Deploy your work to Netlify and put the URL of site at the Github project's About field
 6. (Strongly encouraged) Create Github project and issues to track and relate all your work. Use Github keywords `fixes #` to link PR to an issue.
-7. ![cyf-2022-03-19a.jpg](https://github.com/jackhclee/wallymobi/blob/main/cyf-2022-03-19a.jpg)
-8. Weekly coursework submission to CYF Repo. Submit a pull request of your repo's master branch which includes works done in feature branches to CYF's Hotel master branch weekly.
+   ![cyf-2022-03-19a.jpg](https://github.com/jackhclee/wallymobi/blob/main/cyf-2022-03-19a.jpg)
+7. Weekly coursework submission to CYF Repo. Submit a pull request of your repo's master branch which includes works done in feature branches to CYF's Hotel master branch weekly.
 
 A hotel booking application in React. Homework for the [CodeYourFuture React module](https://codeyourfuture.github.io/syllabus-master/react/)
 
