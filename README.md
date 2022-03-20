@@ -3,14 +3,14 @@
 To assist reviewing and learning, may I kindly request you to follow below extra instructions:
 
 1. Decide and choose a Project Code for your project. e.g. CHT
-2. Create one Feature Branche for each exercise. Commit changes to the corresponding branch. Merge the feature branch into your master branch when for submission. Thus, you should have at least 7 branches for Lesson 1
-3. Select the correct repository and branch when to merge into your project. You should be merging to your Feature Branch to the master branch of your repository rather the CodeYourFuture one.
+2. Create one Feature Branch for each exercise. Commit changes to the corresponding branch. Merge the feature branch into your master branch when its done. Thus, you should have at least 7 branches for Lesson 1
+3. Select the correct repository and branch to merge into your project. You should be merging Feature Branch to the master branch of **_your repository_** rather the CodeYourFuture one.
    ![cyf-2022-03-19b.jpg](https://github.com/jackhclee/wallymobi/blob/main/cyf-2022-03-19b.jpg)
-4. Name branches using this pattern Project Code - NN (e.g. CHT-01)
+4. Name branches using this pattern **_Project Code - NN (e.g. CHT-01)_**
 5. Deplopy your work to Netlify and put the URL of site at the Github project's About field
 6. (Strongly encouraged) Create Github project and issues to track and relate all your work. Use Github keywords `fixes #` to link PR to an issue.
 7. ![cyf-2022-03-19a.jpg](https://github.com/jackhclee/wallymobi/blob/main/cyf-2022-03-19a.jpg)
-8. Weekly coursework submission to CYF Repo. Submit a pull request of your repo's master branch to CYF's master branch weekly.
+8. Weekly coursework submission to CYF Repo. Submit a pull request of your repo's master branch which includes works done in feature branches to CYF's Hotel master branch weekly.
 
 A hotel booking application in React. Homework for the [CodeYourFuture React module](https://codeyourfuture.github.io/syllabus-master/react/)
 
