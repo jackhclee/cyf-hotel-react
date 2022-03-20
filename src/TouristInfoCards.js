@@ -1,16 +1,21 @@
 import React from "react";
+import "./TouristInfoCards.css";
 
 const TouristInfoCards = props => {
   const TouristInfoCard = city => {
     return (
-      <div>
+      <div key={city.name}>
         <div>
-          <img class="citycard" src={city.img} alt="Citycard for {city.name}" />
+          <img
+            class="citycard"
+            src={city.img}
+            alt={`Citycard for ${city.name}`}
+          />
         </div>
         <h3>{city.name}</h3>
         <div>{city.description}</div>
         <button onClick={() => window.open(city.actionUrl, "_null")}>
-          Click here for more info
+          More info
         </button>
       </div>
     );
