@@ -18,6 +18,28 @@
   font-weight: bold;
 }
 
+.TouristCards {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.TouristCards div.one {
+  grid-column: 1;
+}
+
+.TouristCards div.two {
+  grid-column: 1;
+}
+
+.TouristCards div.three {
+  grid-column: 1;
+}
+
+img.citycard {
+  width: 150px;
+  height: 300px;
+}
+
 .App-title {
   font-size: 1.5em;
 }

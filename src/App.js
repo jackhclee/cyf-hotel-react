@@ -4,11 +4,13 @@ import Bookings from "./Bookings";
 import "./App.css";
 import { Footer } from "./Footer";
 import { Heading } from "./Heading";
+import { TouristInfoCards } from "./TouristInfoCards";
 
 const App = () => {
   return (
     <div className="App">
       <Heading />
+      <TouristInfoCards />
       <Bookings />
       <Footer
         addressArray={[
