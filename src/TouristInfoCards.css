@@ -1,0 +1,15 @@
+.TouristCards {
+  margin: 2em;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.TouristCards div {
+  text-align: center;
+}
+
+img.citycard {
+  width: 150px;
+  height: 300px;
+}
