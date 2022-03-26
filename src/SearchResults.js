@@ -7,7 +7,7 @@ const SearchResults = props => {
   return (
     <div>
       <table>
-        <tr>
+        <tr class="abcd">
           <th>Id</th>
           <th>Title</th>
           <th>First Name</th>
