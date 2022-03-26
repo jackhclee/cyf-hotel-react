@@ -6,7 +6,7 @@ const SearchResults = props => {
   //let bookings = JSON.parse("./data/fakeBookings.json")
   return (
     <div>
-      <table class="abcd">
+      <table class="Branch-99">
         <tr>
           <th>Id</th>
           <th>Title</th>
