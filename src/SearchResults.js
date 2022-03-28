@@ -7,37 +7,39 @@ const SearchResults = props => {
   return (
     <div>
       <table class="Branch-99">
-        <tr>
-          <th>Id</th>
-          <th>Title</th>
-          <th>First Name</th>
-          <th>Surname</th>
-          <th>Email</th>
-          <th>Room Id</th>
-          <th>Check-in Date</th>
-          <th>Check-out Date</th>
-          <th>Night</th>
-        </tr>
-        {props.results.map(booking => {
-          return (
-            <tr>
-              <td>{booking.id}</td>
-              <td>{booking.title}</td>
-              <td>{booking.firstName}</td>
-              <td>{booking.surname}</td>
-              <td>{booking.email}</td>
-              <td>{booking.roomId}</td>
-              <td>{booking.checkInDate}</td>
-              <td>{booking.checkOutDate}</td>
-              <td>
-                {moment(booking.checkOutDate).diff(
-                  moment(booking.checkInDate),
-                  "day"
-                )}
-              </td>
-            </tr>
-          );
-        })}
+        <tbody>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>First Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Room Id</th>
+            <th>Check-in Date</th>
+            <th>Check-out Date</th>
+            <th>Night</th>
+          </tr>
+          {props.results.map(booking => {
+            return (
+              <tr>
+                <td>{booking.id}</td>
+                <td>{booking.title}</td>
+                <td>{booking.firstName}</td>
+                <td>{booking.surname}</td>
+                <td>{booking.email}</td>
+                <td>{booking.roomId}</td>
+                <td>{booking.checkInDate}</td>
+                <td>{booking.checkOutDate}</td>
+                <td>
+                  {moment(booking.checkOutDate).diff(
+                    moment(booking.checkInDate),
+                    "day"
+                  )}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
     </div>
   );
