@@ -10,6 +10,8 @@ const Bookings = () => {
 
   let [bookings, setBookings] = useState(FakeBookings);
 
+  let holder = setBookings;
+
   return (
     <div className="App-content">
       <div className="container">
