@@ -11,7 +11,7 @@ const Order = props => {
 
   return (
     <li>
-      Pizzas: {orders} <RestaurantButton clickHandler={orderOne} />
+      {props.orderType}: {orders} <RestaurantButton clickHandler={orderOne} />
     </li>
   );
 };
