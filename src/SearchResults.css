@@ -1,3 +1,11 @@
 table {
   width: 100%;
 }
+
+.recSelectedtrue {
+  background-color: red;
+}
+
+.recSelectedfalse {
+  background-color: white;
+}
