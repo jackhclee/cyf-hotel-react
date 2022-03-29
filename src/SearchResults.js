@@ -3,6 +3,7 @@ import moment from "moment";
 import "./SearchResults.css";
 
 const SearchResults = props => {
+
   // Create a list of metadata to record local status (e.g. Selection status)
   const genRecMeta = results => {
     //console.log(results);
@@ -13,15 +14,17 @@ const SearchResults = props => {
 
   const toggleSelected = tbookingId => {
     console.log(tbookingId);
-    // Scan through the list of metadata and inverse the selection status
+
     setSelected(prevSelected => {
       let newSelected = prevSelected.map(p =>
         p.bookingId === tbookingId
           ? { bookingId: tbookingId, recSelected: !p.recSelected }
           : p
       );
+
       // prevSelected is    F F F F F, when we click on the 2nd item
       // newSelected become F T F F F
+
       return newSelected;
     });
   };
