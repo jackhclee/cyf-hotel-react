@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import moment from "moment";
 import "./SearchResults.css";
 
 const SearchResults = props => {
-  //let bookings = JSON.parse("./data/fakeBookings.json")
+  const genRecMeta = results => {
+    //console.log(results);
+    return results.map(p => {
+      return { bookingId: p.id, recSelected: false };
+    });
+  };
+
+  let [selected, setSelected] = useState(genRecMeta(props.results));
+
+  const toggleSelected = tbookingId => {
+    console.log(tbookingId);
+    setSelected(prevSelected => {
+      let newSelected = prevSelected.map(p =>
+        p.bookingId === tbookingId
+          ? { bookingId: tbookingId, recSelected: !p.recSelected }
+          : p
+      );
+      return newSelected;
+    });
+  };
+
+  const isRecSelected = tBookingId => {
+    console.log(tBookingId);
+    console.table(selected);
+    return selected.find(p => p.bookingId === tBookingId).recSelected;
+  };
+
   return (
     <div>
       <table class="Branch-99">
@@ -19,9 +45,13 @@ const SearchResults = props => {
             <th>Check-out Date</th>
             <th>Night</th>
           </tr>
-          {props.results.map(booking => {
+          {props.results.map((booking, idx) => {
             return (
-              <tr>
+              <tr
+                key={booking.id}
+                onClick={e => toggleSelected(booking.id)}
+                className={"recSelected" + isRecSelected(booking.id)}
+              >
                 <td>{booking.id}</td>
                 <td>{booking.title}</td>
                 <td>{booking.firstName}</td>

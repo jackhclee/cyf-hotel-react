@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: "off" */
+
 import React, { useState } from "react";
 import Search from "./Search.js";
 import { SearchResults } from "./SearchResults.js";
@@ -8,7 +10,7 @@ const Bookings = () => {
     console.info("TO DO!", searchVal);
   };
 
-  let bookings = useState(FakeBookings);
+  let [bookings, setBookings] = useState(FakeBookings);
 
   return (
     <div className="App-content">
