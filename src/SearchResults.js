@@ -61,6 +61,15 @@ const SearchResults = props => {
             <th>Night</th>
             <th>Profile</th>
           </tr>
+          {props.isWaiting === true ? (
+            <tr>
+              <td colspan="10">
+                <h1>Waiting for Data</h1>
+              </td>
+            </tr>
+          ) : (
+            <></>
+          )}
           {props.results.map((booking, idx) => {
             return (
               <tr
