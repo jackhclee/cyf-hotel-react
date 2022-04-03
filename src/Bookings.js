@@ -12,7 +12,7 @@ const Bookings = () => {
         if (booking.firstName === searchVal || booking.surname === searchVal) {
           return true;
         } else {
-          false;
+          return false;
         }
       });
       setBookings(filteredBookings);
