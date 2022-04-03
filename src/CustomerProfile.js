@@ -6,7 +6,7 @@ const CustomerProfile = props => {
   useEffect(() => {
     fetch(`https://cyf-react.glitch.me/customers/${props.id}`)
       .then(response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           return response.json();
         }
       })
