@@ -8,6 +8,7 @@ const Search = () => {
     let customerName = evt.target.value;
     console.log(customerName);
     setSearchInput(customerName);
+    console.log(searchInput);
   };
 
   return (
