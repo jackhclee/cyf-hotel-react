@@ -35,8 +35,7 @@ const Bookings = () => {
   };
 
   useEffect(() => {
-    // Change to "https://cyf-react.glitch.me/" to restore normal function
-    fetch("https://cyf-react.glitch.me/errro")
+    fetch("https://cyf-react.glitch.me")
       .then(response => {
         console.log(response);
         if (response.status === 200) {
