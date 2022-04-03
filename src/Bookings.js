@@ -11,6 +11,8 @@ const Bookings = () => {
       let filteredBookings = bookings.filter(booking => {
         if (booking.firstName === searchVal || booking.surname === searchVal) {
           return true;
+        } else {
+          false;
         }
       });
       setBookings(filteredBookings);
