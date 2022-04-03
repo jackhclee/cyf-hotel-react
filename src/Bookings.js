@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search.js";
 import { SearchResults } from "./SearchResults.js";
+import CustomerProfile from "./CustomerProfile";
 
 const Bookings = () => {
   const search = searchVal => {
@@ -21,6 +22,13 @@ const Bookings = () => {
 
   let [bookings, setBookings] = useState([]);
 
+  let [selectedProfile, setSelectedProfile] = useState(null);
+
+  const handleProfileSelection = id => {
+    console.log(`ShowProfile ${id} clicked`);
+    setSelectedProfile(id);
+  };
+
   useEffect(() => {
     fetch("https://cyf-react.glitch.me")
       .then(response => {
@@ -35,7 +43,11 @@ const Bookings = () => {
     <div className="App-content">
       <div className="container">
         <Search search={search} />
-        <SearchResults results={bookings} />
+        <SearchResults
+          results={bookings}
+          profileSelectionCB={handleProfileSelection}
+        />
+        <CustomerProfile id={selectedProfile} />
       </div>
     </div>
   );

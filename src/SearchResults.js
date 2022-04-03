@@ -3,6 +3,10 @@ import moment from "moment";
 import "./SearchResults.css";
 
 const SearchResults = props => {
+  // const showProfile = (id) => {
+  //   console.log(`ShowProfile ${id} clicked`);
+  // }
+
   // Create a list of metadata to record local status (e.g. Selection status)
   const genRecMeta = results => {
     //console.log(results);
@@ -55,6 +59,7 @@ const SearchResults = props => {
             <th>Check-in Date</th>
             <th>Check-out Date</th>
             <th>Night</th>
+            <th>Profile</th>
           </tr>
           {props.results.map((booking, idx) => {
             return (
@@ -76,6 +81,11 @@ const SearchResults = props => {
                     moment(booking.checkInDate),
                     "day"
                   )}
+                </td>
+                <td>
+                  <button onClick={e => props.profileSelectionCB(booking.id)}>
+                    Show Profile
+                  </button>
                 </td>
               </tr>
             );
