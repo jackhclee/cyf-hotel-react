@@ -22,6 +22,8 @@ const Bookings = () => {
 
   let [bookings, setBookings] = useState([]);
 
+  let [isWaiting, setIsWaiting] = useState(true);
+
   let [selectedProfile, setSelectedProfile] = useState(null);
 
   const handleProfileSelection = id => {
@@ -30,13 +32,18 @@ const Bookings = () => {
   };
 
   useEffect(() => {
-    fetch("https://cyf-react.glitch.me")
+    fetch("https://cyf-react.glitch.me/delayed")
       .then(response => {
         console.log(response);
         return response.json();
       })
-      .then(data => setBookings(data))
-      .catch(error => setBookings([]));
+      .then(data => {
+        setBookings(data);
+        setIsWaiting(false);
+      })
+      .catch(error => {
+        setBookings([]);
+      });
   }, []);
 
   return (
@@ -44,6 +51,7 @@ const Bookings = () => {
       <div className="container">
         <Search search={search} />
         <SearchResults
+          isWaiting={isWaiting}
           results={bookings}
           profileSelectionCB={handleProfileSelection}
         />
