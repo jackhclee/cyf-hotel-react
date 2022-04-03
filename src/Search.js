@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SearchButton } from "./SearchButton";
 
-const Search = () => {
+const Search = props => {
   const [searchInput, setSearchInput] = useState("");
 
   const handleSearchInput = evt => {
@@ -11,6 +11,13 @@ const Search = () => {
     console.log(searchInput);
   };
 
+  const handleFormSubmit = evt => {
+    console.log(`form is submitted and searchInput is ${searchInput}`);
+    // Call the search function passed by Bookings component
+    props.search(searchInput);
+    evt.preventDefault();
+  };
+
   return (
     <div className="search">
       <div className="page-header">
@@ -18,7 +25,10 @@ const Search = () => {
       </div>
       <div className="row search-wrapper">
         <div className="col">
-          <form className="form-group search-box">
+          <form
+            className="form-group search-box"
+            onSubmit={evt => handleFormSubmit(evt)}
+          >
             <label htmlFor="customerName">Customer name</label>
             <div className="search-row">
               <input
