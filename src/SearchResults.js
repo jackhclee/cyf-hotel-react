@@ -3,7 +3,6 @@ import moment from "moment";
 import "./SearchResults.css";
 
 const SearchResults = props => {
-
   // Create a list of metadata to record local status (e.g. Selection status)
   const genRecMeta = results => {
     //console.log(results);
@@ -32,7 +31,11 @@ const SearchResults = props => {
   const isRecSelected = tBookingId => {
     console.log(tBookingId);
     console.table(selected);
-    return selected.find(p => p.bookingId === tBookingId).recSelected;
+    if (selected === []) {
+      return selected.find(p => p.bookingId === tBookingId).recSelected;
+    } else {
+      return false;
+    }
   };
 
   // record local status is stored state called 'selected'
