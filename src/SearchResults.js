@@ -9,7 +9,10 @@ const SearchResults = props => {
 
   // Create a list of metadata to record local status (e.g. Selection status)
   const genRecMeta = results => {
-    //console.log(results);
+    console.log(results);
+    if (results === []) {
+      return null;
+    }
     return results.map(p => {
       return { bookingId: p.id, recSelected: false };
     });
@@ -63,8 +66,17 @@ const SearchResults = props => {
           </tr>
           {props.isWaiting === true ? (
             <tr>
-              <td colspan="10">
-                <h1>Waiting for Data</h1>
+              <td colSpan="10">
+                <h1 class="waiting">Waiting for Data</h1>
+              </td>
+            </tr>
+          ) : (
+            <></>
+          )}
+          {props.isGetDataError === true ? (
+            <tr>
+              <td colSpan="10">
+                <h1 class="error">Error getting Data, call support for help</h1>
               </td>
             </tr>
           ) : (
