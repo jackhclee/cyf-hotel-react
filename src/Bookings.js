@@ -7,6 +7,14 @@ import { SearchResults } from "./SearchResults.js";
 const Bookings = () => {
   const search = searchVal => {
     console.info("TO DO!", searchVal);
+    if (searchVal !== "") {
+      let filteredBookings = bookings.filter(booking => {
+        if (booking.firstName === searchVal || booking.surname === searchVal) {
+          return true;
+        }
+      });
+      setBookings(filteredBookings);
+    }
   };
 
   let [bookings, setBookings] = useState([]);
