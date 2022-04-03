@@ -76,7 +76,7 @@ const SearchResults = props => {
           {props.isGetDataError === true ? (
             <tr>
               <td colSpan="10">
-                <h1 class="error">Error getting Data, call support for help</h1>
+                <h1 class="error">Error getting data, call support for help</h1>
               </td>
             </tr>
           ) : (
