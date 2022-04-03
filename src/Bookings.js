@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Search from "./Search.js";
 import { SearchResults } from "./SearchResults.js";
 import CustomerProfile from "./CustomerProfile";
+import "./Bookings.css";
 
 const Bookings = () => {
   const search = searchVal => {
@@ -24,6 +25,8 @@ const Bookings = () => {
 
   let [isWaiting, setIsWaiting] = useState(true);
 
+  let [isGetDataError, setIsGetDataError] = useState(false);
+
   let [selectedProfile, setSelectedProfile] = useState(null);
 
   const handleProfileSelection = id => {
@@ -32,16 +35,23 @@ const Bookings = () => {
   };
 
   useEffect(() => {
-    fetch("https://cyf-react.glitch.me/delayed")
+    // Change to "https://cyf-react.glitch.me/" to restore normal function
+    fetch("https://cyf-react.glitch.me/errro")
       .then(response => {
         console.log(response);
-        return response.json();
+        if (response.status === 200) {
+          return response.json();
+        } else {
+          throw new Error("Unknown error");
+        }
       })
       .then(data => {
         setBookings(data);
         setIsWaiting(false);
       })
       .catch(error => {
+        setIsGetDataError(true);
+        setIsWaiting(false);
         setBookings([]);
       });
   }, []);
@@ -52,6 +62,7 @@ const Bookings = () => {
         <Search search={search} />
         <SearchResults
           isWaiting={isWaiting}
+          isGetDataError={isGetDataError}
           results={bookings}
           profileSelectionCB={handleProfileSelection}
         />
