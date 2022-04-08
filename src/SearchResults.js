@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import moment from "moment";
 import "./SearchResults.css";
 
@@ -7,11 +7,14 @@ const SearchResults = props => {
   //   console.log(`ShowProfile ${id} clicked`);
   // }
 
+  useEffect(() => {
+    setSelected(genRecMeta(props.results));
+  }, [props.results]);
   // Create a list of metadata to record local status (e.g. Selection status)
   const genRecMeta = results => {
-    console.log(results);
+    console.table(results);
     if (results === []) {
-      return null;
+      return [];
     }
     return results.map(p => {
       return { bookingId: p.id, recSelected: false };
@@ -36,11 +39,17 @@ const SearchResults = props => {
   };
 
   const isRecSelected = tBookingId => {
-    console.log(tBookingId);
+    console.table(tBookingId);
+    console.log(`selected is of length ${selected.length}`);
     console.table(selected);
     if (selected === []) {
+      console.log("C1");
+      return false;
+    } else if (selected.length >= 1) {
+      console.log("C2");
       return selected.find(p => p.bookingId === tBookingId).recSelected;
     } else {
+      console.log("C3");
       return false;
     }
   };
